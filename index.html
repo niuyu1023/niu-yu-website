@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head> 
+<head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Niu Yu | Robotics × Capital</title>
+<title>Niu Yu | Robotics × AI × Capital</title>
 
 
 <style>
@@ -21,7 +21,7 @@ box-sizing:border-box;
 body{
 
 background:#000;
-color:white;
+color:#fff;
 
 font-family:
 -apple-system,
@@ -30,36 +30,27 @@ BlinkMacSystemFont,
 "Helvetica Neue",
 Arial;
 
-overflow-x:hidden;
-
 }
 
-
-/* 导航 */
 
 nav{
 
 position:fixed;
-
 top:0;
-
 width:100%;
-
 height:70px;
 
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 
-gap:50px;
+gap:45px;
 
-background:rgba(0,0,0,.6);
+background:rgba(0,0,0,.65);
 
 backdrop-filter:blur(20px);
 
-z-index:99;
+z-index:100;
 
 }
 
@@ -67,35 +58,34 @@ z-index:99;
 nav a{
 
 color:#aaa;
-
 text-decoration:none;
-
 font-size:14px;
 
 }
 
 
-/* 星空背景 */
+section{
 
-.hero::before{
+min-height:100vh;
 
-content:"";
+display:flex;
 
-position:absolute;
+justify-content:center;
 
-width:600px;
+align-items:center;
 
-height:600px;
+padding:80px 30px;
 
-background:
+}
 
-radial-gradient(
-circle,
-rgba(80,120,255,.25),
-transparent 60%
-);
 
-filter:blur(80px);
+
+.container{
+
+width:90%;
+max-width:1200px;
+
+text-align:center;
 
 }
 
@@ -103,21 +93,31 @@ filter:blur(80px);
 
 .hero{
 
-
 height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
 
 position:relative;
 
+}
+
+
+
+.hero:before{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+background:
+radial-gradient(
+circle,
+rgba(0,120,255,.25),
+transparent 60%
+);
+
+filter:blur(80px);
 
 }
 
@@ -129,12 +129,15 @@ font-size:120px;
 
 letter-spacing:-8px;
 
-z-index:1;
+position:relative;
 
 }
 
 
+
 .hero h2{
+
+margin-top:30px;
 
 font-size:38px;
 
@@ -142,32 +145,17 @@ font-weight:400;
 
 color:#aaa;
 
-margin-top:30px;
-
-z-index:1;
-
 }
+
 
 
 .hero p{
 
+margin-top:30px;
+
 font-size:22px;
 
 color:#777;
-
-margin-top:30px;
-
-z-index:1;
-
-}
-
-
-
-.buttons{
-
-margin-top:50px;
-
-z-index:1;
 
 }
 
@@ -175,69 +163,37 @@ z-index:1;
 
 .btn{
 
+display:inline-block;
+
+margin:50px 10px;
+
 padding:16px 40px;
 
 border-radius:40px;
 
 text-decoration:none;
 
-margin:10px;
+}
 
-display:inline-block;
+
+
+.white{
+
+background:#fff;
+
+color:#000;
 
 }
 
 
 
-.primary{
-
-background:white;
-
-color:black;
-
-}
-
-
-
-.secondary{
+.dark{
 
 background:#111;
 
 border:1px solid #333;
 
-color:white;
-
-}
-
-
-
-
-/* section */
-
-
-section{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:80px 20px;
-
-}
-
-
-
-.container{
-
-width:90%;
-
-max-width:1200px;
-
-text-align:center;
+color:#fff;
 
 }
 
@@ -255,18 +211,15 @@ letter-spacing:-5px;
 
 .subtitle{
 
-margin-top:30px;
-
 font-size:28px;
 
 color:#888;
 
+margin-top:30px;
+
 }
 
 
-
-
-/* 卡片 */
 
 .cards{
 
@@ -292,7 +245,7 @@ padding:45px;
 
 text-align:left;
 
-transition:.5s;
+transition:.4s;
 
 }
 
@@ -302,7 +255,7 @@ transition:.5s;
 
 transform:translateY(-15px);
 
-background:#191919;
+background:#181818;
 
 }
 
@@ -318,7 +271,7 @@ font-size:35px;
 
 .card p{
 
-margin-top:25px;
+margin-top:20px;
 
 color:#888;
 
@@ -328,33 +281,27 @@ line-height:1.8;
 
 
 
-
-/* capital */
-
-.capital{
-
-background:
-
-linear-gradient(
-180deg,
-#000,
-#050505
-);
-
-}
-
-
-
 .quote{
 
-font-size:45px;
-
-line-height:1.4;
+font-size:50px;
 
 margin-top:60px;
 
 }
 
+
+
+.timeline{
+
+margin-top:80px;
+
+font-size:28px;
+
+line-height:2;
+
+color:#ccc;
+
+}
 
 
 
@@ -370,11 +317,6 @@ color:#666;
 
 
 
-
-
-/* 动画 */
-
-
 .fade{
 
 opacity:0;
@@ -384,6 +326,7 @@ transform:translateY(50px);
 transition:1s;
 
 }
+
 
 
 .show{
@@ -396,39 +339,28 @@ transform:none;
 
 
 
-
 @media(max-width:800px){
 
-
 .hero h1{
-
 font-size:60px;
-
 }
 
-
 .title{
-
-font-size:50px;
-
+font-size:55px;
 }
 
 
 .cards{
-
 grid-template-columns:1fr;
-
 }
 
-
 }
-
 
 
 </style>
 
-</head>
 
+</head>
 
 
 <body>
@@ -436,11 +368,13 @@ grid-template-columns:1fr;
 
 <nav>
 
-<a href="#home">Home</a>
+<a href="#robotics">Robotics</a>
 
-<a href="#robotics">Engineering</a>
+<a href="#ai">AI</a>
 
 <a href="#capital">Capital</a>
+
+<a href="#vision">Vision</a>
 
 </nav>
 
@@ -448,11 +382,14 @@ grid-template-columns:1fr;
 
 
 
-<div class="hero" id="home">
+<section class="hero">
+
+
+<div>
 
 
 <h1>
-Niu Yu
+NIU YU
 </h1>
 
 
@@ -462,26 +399,27 @@ Robotics · AI · Capital
 
 
 <p>
-Building intelligent systems for the future.
+Building intelligent machines.<br>
+Investing in the future.
 </p>
 
 
-<div class="buttons">
 
-<a class="btn primary" href="#robotics">
-Explore Engineering
+<a class="btn white" href="#robotics">
+Robotics Lab
 </a>
 
 
-<a class="btn secondary" href="#capital">
+<a class="btn dark" href="#capital">
 Niu Mou Capital
 </a>
 
 
+
 </div>
 
 
-</div>
+</section>
 
 
 
@@ -497,17 +435,16 @@ Niu Mou Capital
 
 <div class="title">
 
-Robotics
+Robotics Lab
 
 </div>
 
 
 <div class="subtitle">
 
-Machines that understand the physical world.
+Engineering intelligence into the physical world.
 
 </div>
-
 
 
 
@@ -517,52 +454,55 @@ Machines that understand the physical world.
 <div class="card">
 
 <h3>
-Robot
+Dexterous Robot
 </h3>
 
 <p>
-Dexterous manipulation,
-robot learning,
-intelligent control.
+
+Robot learning,
+manipulation,
+tactile sensing,
+AI control.
+
 </p>
 
 </div>
 
 
 
-
 <div class="card">
 
 <h3>
-Tactile
+Electronic Skin
 </h3>
 
 <p>
-Electronic skin,
-flexible sensors,
-human-machine interaction.
+
+Flexible sensors,
+human-machine interaction,
+physical intelligence.
+
 </p>
 
 </div>
 
 
 
-
-
 <div class="card">
 
 <h3>
-Industrial AI
+Smart Factory
 </h3>
 
 <p>
-Smart manufacturing,
+
+Industrial robots,
 automation,
-digital transformation.
+digital manufacturing.
+
 </p>
 
 </div>
-
 
 
 </div>
@@ -580,7 +520,7 @@ digital transformation.
 
 
 
-<section>
+<section id="ai">
 
 
 <div class="container fade">
@@ -600,6 +540,7 @@ From data to intelligence.
 </div>
 
 
+
 <div class="cards">
 
 
@@ -610,8 +551,10 @@ AI Agent
 </h3>
 
 <p>
-Intelligent assistants
-and autonomous systems.
+
+Autonomous systems
+and intelligent assistants.
+
 </p>
 
 </div>
@@ -621,12 +564,14 @@ and autonomous systems.
 <div class="card">
 
 <h3>
-Vision
+Computer Vision
 </h3>
 
 <p>
-Computer vision
-and perception.
+
+Machines that
+understand the world.
+
 </p>
 
 </div>
@@ -636,12 +581,14 @@ and perception.
 <div class="card">
 
 <h3>
-Digital Twin
+Robot Learning
 </h3>
 
 <p>
-Connecting simulation
-with reality.
+
+Teaching machines
+to interact with reality.
+
 </p>
 
 </div>
@@ -661,7 +608,8 @@ with reality.
 
 
 
-<section class="capital" id="capital">
+
+<section id="capital">
 
 
 <div class="container fade">
@@ -669,14 +617,14 @@ with reality.
 
 <div class="title">
 
-Niu Mou Capital
+NIU MOU CAPITAL
 
 </div>
 
 
 <div class="subtitle">
 
-Investing in the next generation technology.
+Technology investment for the future.
 
 </div>
 
@@ -690,6 +638,7 @@ Investing in the next generation technology.
 
 
 
+
 <div class="cards">
 
 
@@ -700,8 +649,10 @@ AI
 </h3>
 
 <p>
-Future intelligence
+
+Artificial intelligence
 and computing.
+
 </p>
 
 </div>
@@ -715,8 +666,10 @@ Robotics
 </h3>
 
 <p>
+
 Physical intelligence
 and automation.
+
 </p>
 
 </div>
@@ -730,16 +683,18 @@ Deep Tech
 </h3>
 
 <p>
+
 Semiconductor,
 energy,
 future industry.
+
 </p>
 
 </div>
 
 
-
 </div>
+
 
 
 </div>
@@ -751,13 +706,80 @@ future industry.
 
 
 
-<footer>
 
-Niu Yu
+
+
+<section id="vision">
+
+
+<div class="container fade">
+
+
+<div class="title">
+
+Global Vision
+
+</div>
+
+
+
+<div class="subtitle">
+
+China · Japan · Europe · Global
+
+</div>
+
+
+
+<div class="timeline">
+
+2025<br>
+Robotics & Software Engineering
 
 <br><br>
 
+2026<br>
+Industrial AI & Manufacturing
+
+<br><br>
+
+2030<br>
+Building Robotics Ecosystem
+
+<br><br>
+
+Future<br>
+Niu Mou Capital
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<h2>
+NIU YU
+</h2>
+
+<br>
+
 Engineer · Builder · Investor
+
+<br><br>
+
+Creating the future,
+one system at a time.
 
 <br><br>
 
@@ -768,15 +790,15 @@ Engineer · Builder · Investor
 
 
 
-
 <script>
 
 
-const observer = new IntersectionObserver(
-
+const observer =
+new IntersectionObserver(
 entries=>{
 
-entries.forEach(e=>{
+entries.forEach(
+e=>{
 
 if(e.isIntersecting){
 
@@ -784,21 +806,23 @@ e.target.classList.add("show");
 
 }
 
-})
-
 }
 
+)
+
+}
 );
 
 
 
 document.querySelectorAll(".fade")
-.forEach(el=>observer.observe(el));
+.forEach(
+x=>observer.observe(x)
+);
 
 
 
 </script>
-
 
 
 </body>
