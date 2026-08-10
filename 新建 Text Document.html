@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Niu Yu | Robotics × Capital</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+
+/* 导航 */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(20px);
+
+    z-index:10;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:white;
+}
+
+
+
+/* 首页 */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.hero h1{
+
+    font-size:100px;
+    letter-spacing:-6px;
+
+}
+
+
+.hero h2{
+
+    margin-top:20px;
+    font-size:32px;
+    font-weight:400;
+    color:#aaa;
+
+}
+
+
+.hero p{
+
+    margin-top:30px;
+    color:#777;
+    font-size:22px;
+
+}
+
+
+.buttons{
+
+    margin-top:50px;
+
+}
+
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    margin:10px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+.white{
+
+    background:white;
+    color:black;
+
+}
+
+
+.black{
+
+    background:#111;
+    color:white;
+    border:1px solid #444;
+
+}
+
+
+
+
+
+/* 大标题 */
+
+.section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 40px;
+
+}
+
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    text-align:center;
+
+}
+
+
+.title{
+
+    font-size:80px;
+
+    letter-spacing:-3px;
+
+}
+
+
+.subtitle{
+
+    margin-top:30px;
+
+    color:#888;
+
+    font-size:25px;
+
+}
+
+
+
+
+
+/* 卡片 */
+
+
+.cards{
+
+    margin-top:80px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.card{
+
+    background:#111;
+
+    border-radius:35px;
+
+    padding:50px;
+
+    text-align:left;
+
+    transition:.4s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    background:#171717;
+
+}
+
+
+
+.card h2{
+
+    font-size:35px;
+
+}
+
+
+
+.card p{
+
+    margin-top:20px;
+
+    color:#888;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* 分割 */
+
+
+.divider{
+
+    height:1px;
+
+    background:#222;
+
+    width:80%;
+
+    margin:auto;
+
+}
+
+
+
+/* footer */
+
+footer{
+
+    padding:80px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+.hero h1{
+font-size:60px;
+}
+
+.title{
+font-size:50px;
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#robotics">Engineering</a>
+<a href="#capital">Capital</a>
+
+</nav>
+
+
+
+
+
+<section class="hero" id="home">
+
+
+<h1>Niu Yu</h1>
+
+
+<h2>
+Robotics Engineer × Investor
+</h2>
+
+
+<p>
+Building intelligent machines and investing in the future.
+</p>
+
+
+<div class="buttons">
+
+<button class="white">
+Engineering
+</button>
+
+
+<button class="black">
+Niu Mou Capital
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<div class="divider"></div>
+
+
+
+
+
+
+
+<section class="section" id="robotics">
+
+
+<div class="container">
+
+
+<div class="title">
+Robotics
+</div>
+
+
+<div class="subtitle">
+
+Connecting AI with the physical world.
+
+</div>
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h2>
+Robot Intelligence
+</h2>
+
+<p>
+Robot learning,
+dexterous manipulation,
+computer vision,
+AI control systems.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+Tactile Sensor
+</h2>
+
+<p>
+Flexible electronic skin,
+pressure sensing,
+human-machine interaction.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+Industrial AI
+</h2>
+
+<p>
+Smart manufacturing,
+automation,
+digital transformation.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+Software System
+</h2>
+
+<p>
+AI applications,
+full-stack development,
+cloud infrastructure.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<div class="divider"></div>
+
+
+
+
+
+
+
+
+<section class="section" id="capital">
+
+
+<div class="container">
+
+
+<div class="title">
+
+Niu Mou Capital
+
+</div>
+
+
+
+<div class="subtitle">
+
+Investing in the next generation of technology.
+
+</div>
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h2>
+AI
+</h2>
+
+<p>
+Artificial intelligence,
+foundation models,
+intelligent agents.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+Robotics
+</h2>
+
+<p>
+Physical intelligence,
+automation,
+future workforce.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+Semiconductor
+</h2>
+
+<p>
+Computing power,
+chips,
+hardware ecosystem.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+Future Industry
+</h2>
+
+<p>
+Energy,
+manufacturing,
+global innovation.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+© 2026 Niu Yu
+
+<br><br>
+
+Robotics · AI · Capital
+
+
+</footer>
+
+
+
+
+</body>
+
+</html>
